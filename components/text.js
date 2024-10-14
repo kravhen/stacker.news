@@ -30,6 +30,10 @@ const rehypeSNStyled = () => rehypeSN({
     startTag: '<sub>',
     endTag: '</sub>',
     className: styles.subscript
+  }, {
+    startTag: '<spoiler>',
+    endTag: '</spoiler>',
+    className: styles.spoiler
   }]
 })
 
