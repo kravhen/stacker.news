@@ -125,6 +125,8 @@ export default memo(function Text ({ rel = UNKNOWN_LINK_REL, imgproxyUrls, child
       return <Link id={props.id} target='_blank' rel={rel} href={href}>{children}</Link>
     },
     img: TextMediaOrLink,
+    details: Details,
+    summary: Summary,
     embed: Embed
   }), [outlawed, rel, TextMediaOrLink, topLevel])
 
@@ -250,5 +252,21 @@ function P ({ children, node, onlyImages, somethingBefore, somethingAfter, ...pr
     >
       {children}
     </div>
+  )
+}
+
+function Details ({ children, node, ...props }) {
+  return (
+    <details className={styles.details} {...props}>
+      {children}
+    </details>
+  )
+}
+
+function Summary ({ children, node, ...props }) {
+  return (
+    <summary className={styles.summary} {...props}>
+      {children}
+    </summary>
   )
 }
