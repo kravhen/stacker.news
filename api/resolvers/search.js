@@ -3,7 +3,7 @@ import { whenToFrom } from '@/lib/time'
 import { getItem, itemQueryWithMeta, SELECT } from './item'
 
 // imported from new location
-import { queryParts as utilsQueryParts} from '@/api/search/utils'
+import { queryParts as utilsQueryParts } from '@/api/search/utils'
 
 function queryParts (q) {
   return utilsQueryParts(q)

@@ -1,5 +1,5 @@
 
-function queryParts (q) {
+export function queryParts (q) {
     const regex = /"([^"]*)"/gm
   
     const queryArr = q.replace(regex, '').trim().split(/\s+/)
