@@ -1,14 +1,8 @@
 import { decodeCursor, LIMIT, nextCursorEncoded } from '@/lib/cursor'
-import { whenToFrom } from '@/lib/time'
 import { getItem, itemQueryWithMeta, SELECT } from './item'
 
-// imported from new location
-import { queryParts as utilsQueryParts } from '@/api/search/utils'
+// Just import the builder functions - no need for queryParts anymore
 import { buildRelatedQuery, buildSearchQuery } from '@/api/search/builders'
-
-function queryParts (q) {
-  return utilsQueryParts(q)
-}
 
 export default {
   Query: {
